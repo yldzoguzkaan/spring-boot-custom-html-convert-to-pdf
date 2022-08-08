@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        h1{
+            color: brown;
+        }
+        .quotation {
+            width: 100%;
+        }
+        .quotation, .quotation th, .quotation td {
+            border: 1px solid brown;
+            border-collapse: collapse;
+        }
+        .quotation th {
+            background-color: brown;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<h1>Quotation</h1>
+<table>
+    <tr>
+        <th>Customer</th>
+    </tr>
+    <tr>
+        <td th:text="'Company Name: ' + ${customer.companyName}"></td>
+    </tr>
+    <tr>
+        <td th:text="'Contact Name: ' + ${customer.contactName}"></td>
+    </tr>
+    <tr>
+        <td th:text="'Address: ' + ${customer.address}"></td>
+    </tr>
+    <tr>
+        <td th:text="'Email: ' + ${customer.email}"></td>
+    </tr>
+    <tr>
+        <td th:text="'Phone: ' + ${customer.phone}"></td>
+    </tr>
+</table>
+<br />
+<p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<br />
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book<br />
+    It has survived not only five centuries, but also the leap into electronic typesetting,<br />
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset<br />
+    sheets containing Lorem Ipsum passages, and more recently with desktop publishing software<br />
+    like Aldus PageMaker including versions of Lorem Ipsum.<br />
+</p>
+<p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<br />
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book<br />
+    It has survived not only five centuries, but also the leap into electronic typesetting,<br />
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset<br />
+    sheets containing Lorem Ipsum passages, and more recently with desktop publishing software<br />
+    like Aldus PageMaker including versions of Lorem Ipsum.<br />
+</p>
+<p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<br />
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book<br />
+    It has survived not only five centuries, but also the leap into electronic typesetting,<br />
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset<br />
+    sheets containing Lorem Ipsum passages, and more recently with desktop publishing software<br />
+    like Aldus PageMaker including versions of Lorem Ipsum.<br />
+</p>
+<p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<br />
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book<br />
+    It has survived not only five centuries, but also the leap into electronic typesetting,<br />
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset<br />
+    sheets containing Lorem Ipsum passages, and more recently with desktop publishing software<br />
+    like Aldus PageMaker including versions of Lorem Ipsum.<br />
+</p>
+<p>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
+    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<br />
+    when an unknown printer took a galley of type and scrambled it to make a type specimen book<br />
+    It has survived not only five centuries, but also the leap into electronic typesetting,<br />
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset<br />
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset<br />
+    remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset<br />
+</p>
+<p style="page-break-inside: avoid">
+    <table class="quotation">
+        <tr>
+            <th>Item #</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+        </tr>
+        <tr th:each="item, iterStat: ${quoteItems}">
+            <td th:text="${iterStat.index + 1}"></td>
+            <td th:text="${item.description}"></td>
+            <td th:text="${item.quantity}"></td>
+            <td th:text="${item.unitPrice}"></td>
+            <td th:text="${item.total}"></td>
+        </tr>
+    </table>
+</p>
+</body>
+</html>
